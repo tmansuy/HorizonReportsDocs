@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Horizon Reports 1.1
+title: Horizon Reports 1.2
 nav_order: 1
 parent: Previous Releases
 grand_parent: Home
