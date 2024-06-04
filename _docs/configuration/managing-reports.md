@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Managing Reports
+title: Managing Reports, Schedules, and Tags
 nav_order: 3
 parent: Configuration
 ---
@@ -10,7 +10,8 @@ To delete the selected report, click the ![](/assets/images/deleteicon.png) butt
 
 > <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> This button may not be enabled for all reports.
 
-If you need to delete multiple reports at once, or assign a tenant or role to multiple reports, you can use the Manage Reports dialog to do so.
+
+If you need to delete multiple reports, schedules, or tags at once, or assign a tenant/role/owner to multiple items, you can use the Manage Reports/Schedules/Tags dialog to do so.
 {% if site.has_tenants %}
 ![](/assets/images/managereportstenant.png)
 {% endif %}

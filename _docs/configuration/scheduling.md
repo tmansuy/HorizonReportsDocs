@@ -12,7 +12,11 @@ To schedule one or more reports, choose Schedule from the New menu to bring up t
 
 ![](/assets/images/schedule1.png)
 
-In Step 1, specify the name to assign to the schedule, the starting date and time for the schedule, whether the schedule ends or not, and if so, the ending date. Select how often the schedule is run: daily, weekly, monthly, monthly - day of month, or cron expression. For a daily schedule, choose how many days apart the schedule runs, such as every 2 days, whether the schedule should repeat, and if so after how many minutes it should repeat. If you specify that it should repeat, you can also specify the duration for the repeat interval.
+In Step 1, specify the name to assign to the schedule, the starting date and time for the schedule, whether the schedule ends or not, and if so, the ending date. 
+
+Turn on the *Combine Email Attachments* option to instruct the scheduler to send the fewest emails possible for that schedule. For example, if a user is a recipient on 3 tasks in a schedule, they will receive a single email with 3 attachments when that schedule is finished running.
+
+Select how often the schedule is run: daily, weekly, monthly, monthly - day of month, or cron expression. For a daily schedule, choose how many days apart the schedule runs, such as every 2 days, whether the schedule should repeat, and if so after how many minutes it should repeat. If you specify that it should repeat, you can also specify the duration for the repeat interval.
 
 For a weekly schedule, specify how many weeks apart the schedule runs (such as every 3 weeks) and on which days to run the schedule.
 

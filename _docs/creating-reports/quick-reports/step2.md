@@ -15,6 +15,8 @@ The *Available fields* list shows the fields for the table selected in the Table
 
 Click the ![](/assets/images/displayonlyrelated.png) button to have the Table drop-down list show only tables that are directly related to tables already selected for the report.
 
+If you prefer to see the real table and field names rather than the captions, you can toggle the <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> button to do so.
+
 To scroll the list of fields, drag the scroll bar at the right of the list or use your mouse wheel.
 
 {{ site.app_name }} by default displays fields in alphabetical order. This makes it easy to find a field in the list. However, sometimes it makes more sense to display fields in the order they appear in the table. For example, for typical address fields, you would see this order alphabetically:

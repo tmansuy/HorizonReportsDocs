@@ -196,3 +196,11 @@ If you want a condition to be ignored for this run of the report, turn on the *I
 
 When you have entered the values for each of the conditions, click ![](/assets/images/checkmark.png) to continue with the report. If you click ![](/assets/images/cancelicon.png) instead, the report will not continue.
 
+# Additional Filters
+
+Each report has a default set of filter conditions, even if there are currently no conditions added to it. If you want to be able to re-use a report, but filter it in different ways, you can create an additional set of filter conditions called a Filter Set. 
+
+To add a new Filter Set, click the ![](/assets/images/add.png) button. You'll be prompted to give the set a name, and then a clone of the currently selected Filter Set will be created with the new name. The conditions are copied to the new Filter Set rather than creating an empty one, because you might want to tweak just one or two things in a complex filter, without having to create the filter from scratch each time.
+
+The currently selected Filter Set will be used when the report is previewed. In addition, if a report has more than one Filter Set, you can choose which to use when [scheduling the report]({% link _docs/configuration/scheduling.md %})
+

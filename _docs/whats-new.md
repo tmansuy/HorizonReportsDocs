@@ -7,33 +7,35 @@ parent: Home
 
 # Version 1.3
 
-* You can now define named groups of filter conditions called Filter Sets. Changing the active filter set for a report will change the filter conditions used when running the report. 
+* You can now define named groups of [filter conditions]({% link _docs/creating-reports/filtering/including-records.md %}) called Filter Sets. Changing the active filter set for a report will change the filter conditions used when running the report. 
 
-* Parameters and parameter values for SQL Passthrough reports are now handled like report filter conditions instead of report parameters. This means you can use existing filtering features like ask-at-runtime, expressions, is-one-of lists, and Filter Sets with SQL Passthrough reports. 
+* Parameters and parameter values for [SQL Passthrough reports]({% link _docs/creating-reports/sql-passthrough.md %}) are now handled like report filter conditions instead of report parameters. This means you can use existing filtering features like ask-at-runtime, expressions, is-one-of lists, and Filter Sets with SQL Passthrough reports. 
 
-* When scheduling a report that has multiple filter sets defined, you can choose the filter set to use for each task in the schedule. This means that you can re-use the same report multiple times in a schedule with different sets of filter criteria for each. 
+* When [scheduling a report]({% link _docs/configuration/scheduling.md %}) that has multiple filter sets defined, you can choose the filter set to use for each task in the schedule. This means that you can re-use the same report multiple times in a schedule with different sets of filter criteria for each. 
 
-* Schedules have a new "Combine email attachments" option. If turned on, the scheduler will send the fewest emails possible for that schedule. For example, if a user is a recipient on 3 tasks in a schedule, they will receive a single email with 3 attachments.
+* [Schedules]({% link _docs/configuration/scheduling.md %}) have a new "Combine email attachments" option. If turned on, the scheduler will send the fewest emails possible for that schedule.
 
-* The template list now shows a preview/sample of the selected template.
+* The [template list]({% link _docs/creating-reports/templates.md %}) now shows a preview/sample of the selected template.
 
-* Added a new crosstab template style, SummaryFieldStyle, that only applies to the last row of each page. This allows you to apply specific styles to the summary row.
+* Added a new [crosstab template style]({% link _docs/creating-reports/templates.md %}), SummaryFieldStyle, that only applies to the last row of each page. This allows you to apply specific styles to the summary row.
 
-* Change % and Change Amount columns in a crosstab now support the count summary type. 
+* Change % and Change Amount columns in a [crosstab report]({% link _docs/creating-reports/cross-tab-reports/step3.md %}) now support the count summary type. 
 
-* You can now define the vertical and horizontal position of a chart legend, allowing you to place a legend above or below a chart. 
+* You can now define the vertical and horizontal position of a [chart legend]({% link _docs/creating-reports/chart-reports/step5.md %}), allowing you to place a legend above or below a chart. 
 
-* You can now search the list of schedules by user, name, report name, or email. 
+* You can now search the list of [schedules]({% link _docs/configuration/scheduling.md %}) by user, name, report name, or email. 
 
-* Administrators can now search the list of users by name, email, role, or tenant.
+* You can now search the list of [formulas]({% link _docs/creating-reports/formulas.md %})
 
-* The manage reports dialog can now be used to update the report owner for multiple reports.
+* Administrators can now search the [list of users]({% link _docs/configuration/security.md %}) by name, email, role, or tenant.
 
-* You can now migrate multiple schedules to a new user or delete schedules from the new manage schedules dialog.
+* The [manage Reports/Schedules/Tags dialog]({% link _docs/configuration/managing-reports.md %}) can now be used to update the report owner for multiple reports.
 
-* The tab key will now enter an email address for a schedule recipient when creating a schedule.
+* You can now migrate multiple schedules or tags to a new user or delete multiples from the new [manage Reports/Schedules/Tags dialog]({% link _docs/configuration/managing-reports.md %}).
 
-* You can now toggle the Display real table and field names setting from the report wizards and formula editor. The default setting will still respect the current user's preference. 
+* The tab key will now enter an email address for a schedule recipient when creating a [schedule]({% link _docs/configuration/scheduling.md %}).
+
+* You can now toggle the Display real table and field names setting from the [report wizards]({% link _docs/creating-reports/cross-tab-reports/step3.md %}) and the [formula editor]({% link _docs/creating-reports/formulas.md %}). The default setting will still respect the current user's preference. 
 
 ## Bug Fixes
 

@@ -76,6 +76,8 @@ The expression can contain any of the built-in functions; see the [Expressions a
 
 Select the table to choose fields from with the *Table* control, then click the ![](/assets/images/add.png) beside a field to add its real name to the end of the expression.
 
+If you prefer to see the real table and field names rather than the captions, you can toggle the <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> button to do so.
+
 You can also choose from either a list of functions built into {{ site.app_name }}, or from a list of commonly used expressions. The *Expression functions* drop-down list shows the available function and the arguments each accepts. When you select one, information about the function is displayed below the list, including the data types of the return value and arguments and a description of the function. *The commonly used expressions* drop-down list gives a description of what the expression will evaluate to. Click the *Insert Function* button to insert the selected function or commonly used expression into the expression.
 
 
