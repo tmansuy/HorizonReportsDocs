@@ -8,6 +8,10 @@ To preview a report, click the report name in the Reports Explorer or click the 
 
 ![](/assets/images/preview.png)
 
+If the report you are previewing has more than one filter set defined, you will be prompted to choose which one to use.
+
+![](/assets/images/filtersetprompt.png)
+
 The Report Preview toolbar provides the following functions:
 
 ![](/assets/images/previewtoolbar.png)

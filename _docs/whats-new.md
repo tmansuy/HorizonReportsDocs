@@ -5,66 +5,56 @@ nav_order: 2
 parent: Home
 ---
 
-# Version 1.3
+# Version 1.4
 
-* You can now define named groups of [filter conditions]({% link _docs/creating-reports/filtering/including-records.md %}) called Filter Sets. Changing the active filter set for a report will change the filter conditions used when running the report. 
+* A new "Ignore by Default" setting is available for ask-at-runtime [filter conditions]({% link _docs/creating-reports/filtering/including-records.md %}). If turned on for a filter condition, it will be automatically ignored when prompting for values. This is useful if you want to add a set of pre-defined filter conditions for a report that aren't normally part of the query, but are still handy if you need to further refine the results.
 
-* Parameters and parameter values for [SQL Passthrough reports]({% link _docs/creating-reports/sql-passthrough.md %}) are now handled like report filter conditions instead of report parameters. This means you can use existing filtering features like ask-at-runtime, expressions, is-one-of lists, and Filter Sets with SQL Passthrough reports. 
+* If a report has more than one filter set defined, you are now prompted for which filter set to use when [previewing]({% link _docs/creating-reports/previewing.md %}) the report. 
 
-* When [scheduling a report]({% link _docs/configuration/scheduling.md %}) that has multiple filter sets defined, you can choose the filter set to use for each task in the schedule. This means that you can re-use the same report multiple times in a schedule with different sets of filter criteria for each. 
+* A new [Export All Reports]({% link _docs/creating-reports/importing-and-exporting-reports.md %}) button can be used to generate a zip file containing all reports. 
 
-* [Schedules]({% link _docs/configuration/scheduling.md %}) have a new "Combine email attachments" option. If turned on, the scheduler will send the fewest emails possible for that schedule.
+* Scheduled emails sent with the [Combine Email Attachments]({% link _docs/configuration/scheduling.md %}) option now support using a Horizon Reports role as a recipient. Any users in that role that have email addresses defined will be considered valid recipients when sending schedules.
 
-* The [template list]({% link _docs/creating-reports/templates.md %}) now shows a preview/sample of the selected template.
+* Excel data only output types now support [conditional formats]({% link _docs/creating-reports/quick-reports/step2.md %}) for font and color. 
 
-* Added a new [crosstab template style]({% link _docs/creating-reports/templates.md %}), SummaryFieldStyle, that only applies to the last row of each page. This allows you to apply specific styles to the summary row.
+* [Scheduled tasks]({% link _docs/configuration/scheduling.md %}) are more resiliant. If a report failure occurs during a schedule run, the schedule will now continue with the remaining reports, rather than halting. 
 
-* Change % and Change Amount columns in a [crosstab report]({% link _docs/creating-reports/cross-tab-reports/step3.md %}) now support the count summary type. 
+* When entering email addresses for a scheduled task, you can now use the space and semicolon keys to denote the end of an address in addition to the previously supported comma.
 
-* You can now define the vertical and horizontal position of a [chart legend]({% link _docs/creating-reports/chart-reports/step5.md %}), allowing you to place a legend above or below a chart. 
+* Expressions for "Send to database" [formulas]({% link _docs/creating-reports/formulas.md %}) are no longer processed in any way. This opens up the ability to send native expressions to the database engine that previously might not have been recognized by Horizon Report's generic SQL Parser. 
 
-* You can now search the list of [schedules]({% link _docs/configuration/scheduling.md %}) by user, name, report name, or email. 
+* You can now open an [advanced layout]({% link _docs/creating-reports/ad/index.md %}) containing a chart control with a configuration issue so it can be fixed. 
 
-* You can now search the list of [formulas]({% link _docs/creating-reports/formulas.md %})
-
-* Administrators can now search the [list of users]({% link _docs/configuration/security.md %}) by name, email, role, or tenant.
-
-* The [manage Reports/Schedules/Tags dialog]({% link _docs/configuration/managing-reports.md %}) can now be used to update the report owner for multiple reports.
-
-* You can now migrate multiple schedules or tags to a new user or delete multiples from the new [manage Reports/Schedules/Tags dialog]({% link _docs/configuration/managing-reports.md %}).
-
-* The tab key will now enter an email address for a schedule recipient when creating a [schedule]({% link _docs/configuration/scheduling.md %}).
-
-* You can now toggle the Display real table and field names setting from the [report wizards]({% link _docs/creating-reports/cross-tab-reports/step3.md %}) and the [formula editor]({% link _docs/creating-reports/formulas.md %}). The default setting will still respect the current user's preference. 
+* [Crosstab templates]({% link _docs/creating-reports/templates.md %}) now support the GroupFooterSummaryFieldStyle. This can be used to apply specific styling to the subtotal lines that result from having multiple row fields.
 
 ## Bug Fixes
 
-* When creating a SQL Passthrough report, the SQL input now updates as soon as the value changes, so you no longer need to click the OK button twice.
+* Fixed an issue with Batch reports not being eligible for direct sending via email.
 
-* Fixed a bug where the border style for a crosstab table header cell was not being respected under certain conditions.
+* Fixed an issue with the defined separator character not being used when outputting to a data only delimited format.
 
-* Changed cross-platform drawing library from Skia to DXGraphics. This fixes a number of spacing and sizing issues that only appeared when running in a linux container. 
+* Fixed an issue with the percent of total calculating not being accurate on a summary report.
 
-* Fixed a bug where special characters in a report name caused problems if that report was used in a dashboard.
+* Fixed a top margin spacing issue for crosstab reports with embedded subreports.
 
-* Fixed a bug with the GetConditionValue function.
+* Fixed an issue with the alignment of a style in a Crosstab not being applied.
 
-* Fixed a bug with chart fonts not getting saved properly. 
+* Fixed an issue with the Active Directory Auth setting not being persisted.
 
-* When a chart has an advanced layout and multiple series, each series is now recreated when re-running the chart. 
+* Fixed an issue with the save button being available for built in roles.
 
-* Fixed a bug with deleting an advanced layout for a chart report. 
+* Fixed an error that would rarely appear when navigating back to the Report Explorer from a wizard.
 
-* Fixed issue with "currently selected item" style for a number of themes.
+* Fixed an issue that would cause tenant membership to not be registered properly when calculating access rights.
 
-* Tag items now have a darker font when using the Slate theme.
+* Fixed an issue where the Advanced Report Properties dialog would not work for passthrough reports. 
 
-* Fixed a bug with user display for a selected report.
+* Fixed an issue with filter sets not working for SQL Passthrough reports. 
 
-* Fixed a bug where a formula with group filters could not be copied.
+* Fixed a bug where a Pivot control in an advanced layout would be assigned the wrong data source. 
 
-* Fixed a bug where you could not download the application logs package if a crashdump.txt file existed.
+* Fixed an issue that caused the missing virtual table error to appear multiple times when editing a report that has this problem.
 
-* Fixed a bug where you were unable to load a report if there was a problem with the filter conditions.
+* Fixed a bug that occurred when editing the Crosstab Standard Unicode template. 
 
-* Fixed an issue with the expression editor not appearing properly in the advanced report designer.
+* Fixed an issue that would occur when you try to delete more than one report at a time from the Manage Reports interface.

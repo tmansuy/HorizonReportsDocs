@@ -125,6 +125,10 @@ The cross-tab report templates that come with {{ site.app_name }} have the follo
 
 * *RowHeadingStyle2*: used by the second row field if it exists.
 
+* *SummaryFieldStyle*: used by the summary/total row at the bottom of each page.
+
+* *GroupFooterSummaryFieldStyle*: used by subtotal rows that are added by a second row field, if it exists.
+
 See the [Styles]({% link _docs/creating-reports/advanced-layout-designer/styles.md %}) help topic for information on how styles work in the Layout Designer.
 
 The cross-tab templates that come with {{ site.app_name }} have the following objects:
