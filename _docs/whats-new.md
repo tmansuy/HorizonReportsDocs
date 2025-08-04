@@ -23,7 +23,7 @@ parent: Home
 
 * Expressions for "Send to database" [formulas]({% link _docs/creating-reports/formulas.md %}) are no longer processed in any way. This opens up the ability to send native expressions to the database engine that previously might not have been recognized by Horizon Report's generic SQL Parser. 
 
-* You can now open an [advanced layout]({% link _docs/creating-reports/ad/index.md %}) containing a chart control with a configuration issue so it can be fixed. 
+* You can now open an [advanced layout]({% link _docs/creating-reports/advanced-layout-designer/index.md %}) containing a chart control with a configuration issue so it can be fixed. 
 
 * [Crosstab templates]({% link _docs/creating-reports/templates.md %}) now support the GroupFooterSummaryFieldStyle. This can be used to apply specific styling to the subtotal lines that result from having multiple row fields.
 
