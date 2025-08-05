@@ -17,7 +17,7 @@ parent: Home
 
 * Excel data only output types now support [conditional formats]({% link _docs/creating-reports/quick-reports/step2.md %}) for font and color. 
 
-* [Scheduled tasks]({% link _docs/configuration/scheduling.md %}) are more resiliant. If a report failure occurs during a schedule run, the schedule will now continue with the remaining reports, rather than halting. 
+* [Scheduled tasks]({% link _docs/configuration/scheduling.md %}) are more resilient. If a report failure occurs during a schedule run, the schedule will now continue with the remaining reports, rather than halting. 
 
 * When entering email addresses for a scheduled task, you can now use the space and semicolon keys to denote the end of an address in addition to the previously supported comma.
 

@@ -192,7 +192,7 @@ When you run a report that has any filter conditions with the *Ask at runtime* o
 
 See the [The Filter Page]({% link _docs/creating-reports/filtering/including-records.md %}) topic for information on how to enter values and using the ![](/assets/images/valuesicon.png) button.
 
-If you want a condition to be ignored for this run of the report, turn on the *Ignore* option. This acts as if the filter condition doesn't exist.
+If you want a condition to be ignored for this run of the report, turn on the *Ignore* option. This acts as if the filter condition doesn't exist. When you turn on the *Ask at runtime* option for a condition, you also have the option to turn on *Ignore by default*. If you do this, when the prompt for filter values appears, this filter condition will be initially set to ignored. This is useful if you want to define a set of default filters to choose from, but only one or a few at a time would make sense in a typical situation.
 
 When you have entered the values for each of the conditions, click ![](/assets/images/checkmark.png) to continue with the report. If you click ![](/assets/images/cancelicon.png) instead, the report will not continue.
 
@@ -202,5 +202,5 @@ Each report has a default set of filter conditions, even if there are currently 
 
 To add a new Filter Set, click the ![](/assets/images/add.png) button. You'll be prompted to give the set a name, and then a clone of the currently selected Filter Set will be created with the new name. The conditions are copied to the new Filter Set rather than creating an empty one, because you might want to tweak just one or two things in a complex filter, without having to create the filter from scratch each time.
 
-The currently selected Filter Set will be used when the report is previewed. In addition, if a report has more than one Filter Set, you can choose which to use when [scheduling the report]({% link _docs/configuration/scheduling.md %})
+When editing a report, the currently selected Filter Set will be used when the report is previewed. However, reports previewed from the report explorer will prompt for the filter set to use if more than one is available. In addition, if a report has more than one Filter Set, you can choose which to use when [scheduling the report]({% link _docs/configuration/scheduling.md %})
 
